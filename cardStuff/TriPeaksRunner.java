@@ -24,11 +24,11 @@ public class TriPeaksRunner {
 	
 	
 	public static void main(final String[] args) {
-		String deck = "9s,4s,qs,7d,8s,2c,6s,jd,9d,kc,as,ks,6h,qd,jc,3s,8h,qh,6c,6d,5c,5s,10c,10s";
-		String l1 = "8c,2d,kh,10d,7s,8d,7c,3c,qc,3d";
-		String l2 = "7h,4d,5h,4h,js,kd,ac,2h,ah";
-		String l3 = "4c,3h,9h,jh,5d,10h";
-		String l4 = "2s,ad,9c";
+		String deck = "jd,qd,7c,ks,4c,8h,2h,7h,ad,6d,qc,jh,9c,qs,js,7d,as,9s,ac,th,2s,tc,3h,qh";
+		String l1 = "kh,4s,6h,5c,5s,7s,3d,5d,jc,ah";
+		String l2 = "6c,kd,kc,2d,5h,td,ts,9h,9d";
+		String l3 = "4h,8d,8s,4d,3c,8c";
+		String l4 = "6s,3s,2c";
 		
 		
 		TriPeaksRunner tpr = new TriPeaksRunner(deck,l1,l2,l3,l4);
@@ -100,7 +100,7 @@ public class TriPeaksRunner {
 					}
 				}
 				
-				if ((matches.size() < 1) || ((matches.size() <= 0) && (sr.nextInt(100) < 40))) {
+				if ((matches.size() < 1) || ((matches.size() <= 3) && (sr.nextInt(100) < 40))) {
 					scanning = false;
 				} else {
 					int pi = sr.nextInt(matches.size());
